@@ -1,0 +1,157 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap");
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+.brand_name {
+  font-weight: bold;
+}
+
+.container {
+  animation: fadeIn 1s;
+}
+
+.btn {
+  transition: 0.5s all !important;
+}
+
+.active_link {
+  border-bottom: 3px solid blue;
+}
+.post_container {
+  margin-top: 30px;
+}
+
+.card {
+  border: none !important;
+}
+.post_card {
+  width: 50%;
+  margin-bottom: 30px;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.5s all;
+}
+
+.post_card:hover,
+.form_container:hover {
+  box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px,
+    rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+}
+
+.card_text {
+  display: block;
+  max-lines: 2;
+  max-height: 50px;
+  overflow: hidden;
+  word-wrap: break-word;
+  text-overflow: ellipsis;
+}
+
+.form_container {
+  width: 70% !important;
+  margin-top: 70px !important;
+  padding: 20px;
+  margin-left: auto;
+  margin-right: auto;
+  box-shadow: 0 3px 3px rgba(0, 0, 0, 0.2);
+  transition: 0.5s all;
+}
+
+.view_container {
+  width: 70% !important;
+  margin-top: 100px !important;
+}
+
+.post_view_card {
+  width: 80%;
+  padding: 10px;
+  border: none !important;
+}
+
+.post_title {
+  font-weight: bold;
+  font-size: xx-large;
+  font-family: "Times New Roman", sans-serif;
+}
+
+.post_author {
+  font-style: italic;
+  display: inline-block;
+  font-weight: bold;
+  font-size: "30px";
+  margin-left: auto;
+  margin-bottom: 20px;
+  font-family: "Times New Roman", sans-serif;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Responsive */
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+  .post_card {
+    width: 90%;
+  }
+  .view_container {
+    width: 90% !important;
+  }
+  .form_container {
+    width: 100% !important;
+  }
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+  .post_card {
+    width: 80%;
+  }
+  .view_container {
+    width: 70% !important;
+  }
+  .form_container {
+    width: 100%;
+  }
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .post_card {
+    width: 60%;
+  }
+  .view_container {
+    width: 70% !important;
+  }
+  .form_container {
+    width: 100%;
+  }
+}
+
+/* Large devices (laptops/desktops, 992px and up) */
+@media only screen and (min-width: 992px) {
+  .post_card {
+    width: 50%;
+  }
+  .view_container {
+    width: 70% !important;
+  }
+}
+
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+  .post_card {
+    width: 50%;
+  }
+  .view_container {
+    width: 70% !important;
+  }
+}
