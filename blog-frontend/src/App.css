@@ -24,6 +24,34 @@
 .post_container {
   margin-top: 30px;
 }
+.page_container {
+  width: 100vw;
+  height: 100vh;
+  background: #fff;
+  position: absolute;
+  top: 0px;
+  display: absolute;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.login_container {
+  margin-top: 100px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background: #ffffff;
+  top: 0px;
+}
+
+.login_container h5 {
+  font-size: 30px;
+}
+
+.login_form {
+  padding: 20px;
+}
 
 .card {
   border: none !important;

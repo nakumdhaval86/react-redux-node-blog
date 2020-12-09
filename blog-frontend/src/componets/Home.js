@@ -8,8 +8,6 @@ function Home() {
 
   const result = useSelector((state) => state.PostReducer.posts);
 
-  const stated = useSelector((state) => state.PostReducer);
-
   useEffect(() => {
     dispatch(getAllPost());
   }, []);

@@ -31,7 +31,7 @@ function AdminNavbar() {
               exact
               activeClassName="admin_active"
               className="nav_link"
-              to=""
+              to="/admin/Login"
             >
               <i className="fa fa-sign-out"></i> Log Out
             </NavLink>

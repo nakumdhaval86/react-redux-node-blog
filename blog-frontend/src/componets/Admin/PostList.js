@@ -3,7 +3,7 @@ import { useSelector, useDispatch } from "react-redux";
 import { getAllPost } from "../../actions/PostAction";
 import { NavLink, useHistory } from "react-router-dom";
 import { deletePost } from "../../actions/PostAction";
-import { addPost, getPost, updatePost } from "../../actions/PostAction";
+import { getPost } from "../../actions/PostAction";
 
 function PostList() {
   const dispatch = useDispatch();
