@@ -33,6 +33,10 @@ const PostSchema = new mongoose.Schema({
   thumb: {
     type: String,
   },
+  author: {
+    type: ObjectId,
+    ref: "user",
+  },
   createdAt: {
     type: Date,
     default: Date.now,

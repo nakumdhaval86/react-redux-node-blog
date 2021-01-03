@@ -2,6 +2,7 @@ var createError = require("http-errors");
 var express = require("express");
 var cors = require("cors");
 var path = require("path");
+const bodyParser = require("body-parser");
 var cookieParser = require("cookie-parser");
 var logger = require("morgan");
 
@@ -14,21 +15,21 @@ var app = express();
 app.set("views", path.join(__dirname, "views"));
 app.set("view engine", "ejs");
 
+var corsOptions = {
+  origin: "*",
+  methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+  preflightContinue: false,
+  optionsSuccessStatus: 200,
+  allowedHeaders: ["Content-Type", "Authorization"],
+};
+
 //CORS Allow
-app.use((req, res, next) => {
-  res.setHeader("Access-Control-Allow-Origin", "*");
-  res.setHeader("Access-Control-Allow-Methods", "OPTIONS,GET,PUT,POST,DELETE");
-  res.setHeader(
-    "Access-Control-Allow-Headers",
-    "Content-Type",
-    "Authorization"
-  );
-  next();
-});
+app.use(cors(corsOptions));
 
 app.use(logger("dev"));
 app.use(express.json());
-app.use(express.urlencoded({ extended: false }));
+// app.use(express.urlencoded({ extended: true }));
+app.use(bodyParser.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, "public")));
 app.use("/", indexRouter);

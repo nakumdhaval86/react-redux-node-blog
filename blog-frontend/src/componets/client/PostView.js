@@ -1,8 +1,10 @@
 import React, { useEffect } from "react";
 import { NavLink, useParams } from "react-router-dom";
-import { getPost } from "../actions/PostAction";
+import { getPost } from "../../actions/PostAction";
 import { useDispatch, useSelector } from "react-redux";
 import ReactHtmlParser from "react-html-parser";
+import Img from "react-cool-img";
+import Loader from "../../loader.gif";
 
 function PostView() {
   const { id } = useParams();
@@ -13,6 +15,8 @@ function PostView() {
   }, [id, dispatch]);
 
   const result = useSelector((state) => state.PostReducer.post);
+
+  console.log(result);
 
   if (!result) {
     return <h1>Loading...</h1>;
@@ -25,12 +29,13 @@ function PostView() {
       </NavLink>
       <div className="post_view_card mx-auto">
         <h5 className="card-title post_title">{result.title}</h5>
-        <h6 className="post_author">by dhaval nakum</h6>
+        <p>by {result.author.name}</p>
         <div className="card border-none">
-          <img
-            src="https://cdn.pixabay.com/photo/2016/01/19/17/15/wind-turbine-1149604_1280.jpg"
+          <Img
+            placeholder={Loader}
+            src={result.thumb}
             className="card-img-top"
-            alt="..."
+            width="100%"
           />
           <div className="card-body">{ReactHtmlParser(result.body)}</div>
         </div>

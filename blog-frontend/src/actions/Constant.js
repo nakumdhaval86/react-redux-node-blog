@@ -1,0 +1,19 @@
+export const GET_ALL_POST = "GET_ALL_POST";
+export const GET_POST = "GET_POST";
+export const ADD_POST = "ADD_POST";
+export const UPDATE_POST = "UPDATE_POST";
+export const DELETE_POST = "DELETE_POST";
+export const LOAD_POST = "LOAD_POST";
+export const SEARCH_POST = "SEARCH_POST";
+
+export const USER_LOADING = "USER_LOADING";
+export const GET_EROR = "GET_EROR";
+export const CLEAR_ERROR = "CLEAR_ERROR";
+export const REGISTER_SUCCESS = "REGISTER_SUCCESS";
+export const REGISTER_FAIL = "REGISTER_FAIL";
+export const LOGIN_SUCCESS = "LOGIN_SUCCESS";
+export const LOGIN_FAIL = "LOGIN_FAIL";
+export const LOGOUT = "LOGOUT";
+export const FORGOT_PASSWORD = "FORGOT_PASSWORD";
+export const SET_NEW_PASSWORD = "SET_NEW_PASSWORD";
+export const FORGOT_PASSWORD_ERROR = "FORGOT_PASSWORD_ERROR";
